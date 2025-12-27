@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engage Fates Calculator</title>
+    <base href="/EngageFatesCalculator/zh/" />
+<link rel="modulepreload" href="/EngageFatesCalculator/zh/calculator-512844b128621f78.js" crossorigin="anonymous" integrity="sha384-dzExhJer/K3Gj8mpiOhETVYTPYEpdxPAUZX2ovuj2vdi8rIYZfyl7DJRpWJgPJrD"><link rel="preload" href="/EngageFatesCalculator/zh/calculator-512844b128621f78_bg.wasm" crossorigin="anonymous" integrity="sha384-YHRY8MVDp7wgmiu6cSAOkf7ul105O/wsFAWb5EgS2es/TIDPSBdJSV9IzzEF3CAU" as="fetch" type="application/wasm"></head>
+<body style="margin: 0; padding: 0; width:100%; height:100svh">
+
+<script type="module">
+import init, * as bindings from '/EngageFatesCalculator/zh/calculator-512844b128621f78.js';
+const wasm = await init({ module_or_path: '/EngageFatesCalculator/zh/calculator-512844b128621f78_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+</body>
+</html>
